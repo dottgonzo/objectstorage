@@ -3,7 +3,7 @@ import mime from 'mime-types'
 import { Client, ClientOptions, CopyConditions, ItemBucketMetadata } from 'minio'
 import moment from 'moment'
 import path from 'path'
-import * as interfaces from './interfaces'
+import { IMinioLs } from './interfaces'
 
 export default class MinioStorage extends Client {
   constructor(config: ClientOptions) {
@@ -15,7 +15,7 @@ export default class MinioStorage extends Client {
     if (!options) options = {}
     if (!options.recursive) options.recursive = false
 
-    return new Promise<interfaces.IMinioLs[]>((resolve, reject) => {
+    return new Promise<IMinioLs[]>((resolve, reject) => {
       const bk = minioDirPath.split('/')[1]
 
       let prefix = minioDirPath.split('/' + bk + '/')[1]
@@ -23,7 +23,7 @@ export default class MinioStorage extends Client {
       if (prefix && prefix[prefix.length - 1] !== '/') prefix = prefix + '/'
 
       const stream = this.listObjectsV2(bk, prefix, options.recursive)
-      const fileList: interfaces.IMinioLs[] = []
+      const fileList: IMinioLs[] = []
       stream.on('data', (obj) => {
         if (obj && obj.lastModified && obj.name) {
           const dateOfFile = moment(obj.lastModified)
