@@ -1,5 +1,5 @@
 {
-  "name": "objectstorage",
+  "name": "cloud-object-storage-lib",
   "version": "0.0.0",
   "description": "Object Storage Manager for node",
   "main": "index.js",
