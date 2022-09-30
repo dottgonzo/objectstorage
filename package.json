@@ -7,9 +7,9 @@
     "test": "mocha",
     "build": "./node_modules/.bin/tsc",
     "watch-ts": "./node_modules/.bin/tsc -w",
-    "release:patch": "npm version patch && git push && git push --tags",
-    "release:minor": "npm version minor && git push && git push --tags",
-    "release:major": "npm version major && git push && git push --tags"
+    "release:patch": "npm version patch && git push && git push --tags && npm publish",
+    "release:minor": "npm version minor && git push && git push --tags && npm publish",
+    "release:major": "npm version major && git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
