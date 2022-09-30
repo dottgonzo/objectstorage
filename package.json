@@ -26,18 +26,18 @@
   },
   "homepage": "https://github.com/dottgonzo/objectstorage#readme",
   "devDependencies": {
-    "@types/minio": "^7.0.12",
-    "@types/node": "^14.18.10",
+    "@types/node": "^16.11.62",
     "chai": "^4.3.6",
-    "mocha": "^9.2.0",
-    "prettier": "^2.5.1",
-    "prettier-plugin-organize-imports": "^2.3.4",
-    "typescript": "^4.5.5"
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.1",
+    "typescript": "^4.8.4"
   },
   "dependencies": {
-    "aws-sdk": "^2.1071.0",
-    "mime-types": "^2.1.34",
-    "minio": "^7.0.26",
-    "moment": "^2.29.1"
+    "@types/minio": "^7.0.13",
+    "aws-sdk": "^2.1226.0",
+    "mime-types": "^2.1.35",
+    "minio": "^7.0.32",
+    "moment": "^2.29.4"
   }
 }
